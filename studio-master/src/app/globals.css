@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 20% 11%;
+    --foreground: 210 40% 98%;
+    --card: 260 20% 15%;
+    --card-foreground: 210 40% 98%;
+    --popover: 260 20% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 263 80% 58%; /* Deep Purple: #673AB7 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 95 80% 50%; /* Electric Green: #7CFC00 */
+    --accent-foreground: 260 20% 11%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 27%;
+    --input: 217 33% 17%;
+    --ring: 263 80% 58%;
+    --radius: 0.75rem;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  .dark {
+    --background: 224 71% 4%; /* #070d1f - Deeper blue */
+    --foreground: 210 40% 98%;
+
+    --card: 224 71% 8%; /* #0e1833 - Slightly lighter card */
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 263 84% 67%; /* #673ab7 - Deep Purple */
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+ 
+    --accent: 95 80% 50%; /* #7CFC00 - Electric Green */
+    --accent-foreground: 10 90% 10%; /* Darker for green accent text */
+ 
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 263 84% 40%; /* Border with a purple tint */
+    --input: 217 33% 17%;
+    --ring: 263 84% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .neon-glow {
+    text-shadow:
+      0 0 5px hsl(var(--accent)),
+      0 0 10px hsl(var(--accent)),
+      0 0 20px hsl(var(--accent)),
+      0 0 40px hsl(var(--primary)),
+      0 0 80px hsl(var(--primary));
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 2px hsl(var(--accent) / 0.7), 0 0 5px hsl(var(--accent) / 0.5), 0 0 10px hsl(var(--accent) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 5px hsl(var(--accent) / 1), 0 0 10px hsl(var(--accent) / 0.8), 0 0 20px hsl(var(--accent) / 0.5);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s infinite ease-in-out;
+  }
+}
