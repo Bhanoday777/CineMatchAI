@@ -2,8 +2,7 @@
 
 Welcome to CineMatch AI, a modern web application that uses artificial intelligence to provide personalized movie recommendations. Discover new films based on your mood, a descriptive prompt, or your unique viewing history.
 
-![CineMatch AI Screenshot](https://placehold.co/800x400.png) 
-*Note: Replace with a real screenshot of the app.*
+![CineMatch AI Screenshot](https://storage.googleapis.com/project-spark-341015.appspot.com/a492f44a-10f8-472e-9a1d-a34f9a0c436d)
 
 ## ✨ Key Features
 
